@@ -1,0 +1,23 @@
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+<div class="container">
+<h2>Admin Dashboard</h2>
+
+<table border="1" width="100%">
+<tr>
+<th>ID</th><th>Username</th><th>Email</th><th>Role</th>
+</tr>
+
+{% for u in users %}
+<tr>
+<td>{{ u.id }}</td>
+<td>{{ u.username }}</td>
+<td>{{ u.email }}</td>
+<td>{{ u.role }}</td>
+</tr>
+{% endfor %}
+</table>
+
+<br>
+<a href="/logout">Logout</a>
+</div>
