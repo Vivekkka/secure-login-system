@@ -1,134 +1,137 @@
-## Secure Login System with Role-Based Access Control
+# Secure Login System with Role-Based Access Control
+
 ## Project Overview
 
 This project is a secure web-based login system developed as part of my Cyber Security Internship.
 It implements authentication, authorization, and multiple security controls to protect against common web attacks.
 
-The system supports User and Admin roles with restricted access and includes protections such as password hashing, account lockout, and input validation.
+The system supports User and Admin roles with restricted access and includes protections such as password hashing,
+account lockout, input validation, and secure session management.
+
+---
 
 ## Technologies Used
 
-Backend: Flask (Python)
+Backend: Flask (Python)  
+Frontend: HTML, CSS  
+Database: SQLite  
+Security: bcrypt, Flask sessions  
+Tools: VS Code, Git, GitHub  
 
-Frontend: HTML, CSS
-
-Database: SQLite
-
-Security: bcrypt, Flask sessions
-
-Tools: VS Code, GitHub
+---
 
 ## Setup Instructions
-## 1️ Clone the Repository
-git clone <your-github-repo-link>
-cd secure-login-system
 
-## 2️ Install Dependencies
-pip install flask flask-sqlalchemy flask-bcrypt
+Clone the repository, install dependencies, and run the application.
 
-## 3️ Run the Application
-python app.py
+git clone https://github.com/Vivekkka/secure-login-system.git  
+cd secure-login-system  
+pip install flask flask-sqlalchemy flask-bcrypt  
+python app.py  
 
-## 4️ Open in Browser
+Open in browser:  
 http://127.0.0.1:5000
 
+---
+
 ## Features Implemented
+
 ## User Registration
-
-New users can register with username, email, password, and role
-
-Duplicate email registration is prevented
-
-Passwords are securely hashed using bcrypt
+Register using username, email, password, and role  
+Duplicate email registration prevented  
+Passwords securely hashed using bcrypt  
 
 ## User Login
-
-Secure login with email and password
-
-Session-based authentication
-
-Role-based redirection after login
+Secure login with email and password  
+Session-based authentication  
+Role-based redirection after login  
 
 ## Role-Based Access Control (RBAC)
+Admin can view all registered users  
+Users cannot access admin routes  
+Unauthorized access is restricted  
 
-Admin: Can view all registered users
-
-User: Can access only user dashboard
-
-Unauthorized access is restricted
+---
 
 ## Security Enhancements
 
-Input validation to prevent SQL Injection
+Input validation to prevent SQL Injection  
+Password hashing using bcrypt  
+Account lockout after 3 failed login attempts  
+Session protection after logout  
+Secure database handling  
 
-Password hashing using bcrypt
-
-Account lockout after multiple failed login attempts
-
-Session protection after logout
+---
 
 ## Testing Performed
 
-Successful registration and login
+Successful user registration  
+Duplicate email registration handling  
+Invalid login attempt handling  
+Account lockout after multiple failed attempts  
+Session protection after logout  
+Verification of hashed passwords in database  
 
-Duplicate email registration check
-
-Invalid credentials handling
-
-Account lockout after 3 failed login attempts
-
-Session protection after logout
-
-Database verification for hashed passwords
+---
 
 ## Screenshots (System in Action)
 
-VS Code project structure
+### VS Code Project Structure
+![Project Structure](screenshots/01_project_structure.png)
 
-Registration page
+### Registration Page
+![Registration Page](screenshots/02_register_page.png)
 
-Registration success message
+### Registration Success
+![Registration Success](screenshots/03_registration_success.png)
 
-Login page
+### Login Page
+![Login Page](screenshots/04_login_page.png)
 
-Successful login redirect
+### Login Success Redirect
+![Login Success](screenshots/05_login_success_redirect.png)
 
-Admin dashboard (user list)
+### Admin Dashboard
+![Admin Dashboard](screenshots/06_admin_dashboard.png)
 
-Account lockout message
+### Account Lockout
+![Account Lockout](screenshots/07_account_lockout.png)
 
-SQLite database structure
+### SQLite Database Structure
+![SQLite Table](screenshots/08_sqlite_table.png)
 
-## Challenges Faced & Solutions
-## Issue: Duplicate Registration
+---
 
-Problem: Users could register with the same email
+## Challenges Faced and Solutions
 
-Solution: Implemented unique email validation using database queries
+## Duplicate Registration
+Problem: Users could register with the same email  
+Solution: Implemented unique email validation using database queries  
 
-## Issue: Password Security
+## Password Security
+Problem: Plain-text passwords are insecure  
+Solution: Implemented bcrypt password hashing  
 
-Problem: Plain-text passwords are insecure
+## Brute Force Login Attempts
+Problem: Unlimited login attempts  
+Solution: Implemented failed login counter and account lockout mechanism  
 
-Solution: Implemented bcrypt password hashing
+## Unauthorized Access
+Problem: Users accessing admin routes  
+Solution: Implemented role-based access control using Flask sessions  
 
-## Issue: Brute Force Login Attempts
-
-Problem: Unlimited login attempts
-
-Solution: Implemented failed login counter and account lockout mechanism
-
-## Issue: Unauthorized Access
-
-Problem: Users accessing admin routes
-
-Solution: Implemented role-based access control using Flask sessions
+---
 
 ## Conclusion
 
-This project helped me gain hands-on experience in building a secure authentication system while applying cybersecurity principles such as access control, secure password storage, and attack prevention mechanisms.
+This project provided hands-on experience in building a secure authentication system while applying
+cybersecurity principles such as secure password storage, access control, brute force prevention,
+and session security.
+
+---
 
 ## Author
 
-Vivek Kumar Digar
-Cyber Security Intern
+Vivek Kumar Digar  
+Cyber Security Intern  
+GitHub: https://github.com/Vivekkka
